@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+DIR=$(cd $(dirname "$0"); pwd)
+
+###############################################################################
+# Packages
+###############################################################################
+
+# Needed for steam
+sudo dpkg --add-architecture i386
+
+sudo apt update
+
+if [[ -f $DIR/packages/apt ]]; then
+	exec<$DIR/packages/apt
+	while read line
+	do
+		if [[ ! "$line" =~ (^#|^$) ]]; then
+			packages="$packages $line"
+		fi
+	done
+
+	sudo apt install $packages
+fi
+
+###############################################################################
+# Packages not in repositories
+###############################################################################
+URL='https://discordapp.com/api/download?platform=linux&format=deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
+
+###############################################################################
+# Loading dotfiles
+###############################################################################
+sudo apt install xstow
+
+xstow $DIR/../bash/
+xstow $DIR/../compton/
+xstow $DIR/../dunst/
+xstow $DIR/../git/
+xstow $DIR/../gnupg/
+xstow $DIR/../gtk/
+xstow $DIR/../i3/
+xstow $DIR/../ssh/

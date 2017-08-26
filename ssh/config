@@ -1,0 +1,19 @@
+# Global Settings
+ForwardAgent yes
+HashKnownHosts no
+
+# Hosts
+Host Caithe
+	HostName erinvanderveen.nl
+
+Host Lilo
+	HostName lilo.science.ru.nl
+	User eveen
+
+# Default
+Host *
+    User erin
+    StrictHostKeyChecking ask
+    ServerAliveCountMax 6
+    ServerAliveInterval 30
+    KeepAlive yes

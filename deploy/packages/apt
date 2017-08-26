@@ -1,0 +1,34 @@
+# GNOME-stack
+# TODO: Change to essential gnome packages
+gnome
+gnome-screensaver
+
+# Themes
+arc-theme
+numix-icon-theme
+fonts-font-awesome
+
+# Desktop
+i3
+xautolock
+compton
+feh
+redshift
+
+# Printing/Scanning
+simple-scan
+
+# Utility
+pasystray
+network-manager-gnome
+scrot
+
+# Applications
+neovim
+owncloud-client
+steam
+firefox-esr
+keepassx
+transmission-gtk
+seahorse
+gdebi
