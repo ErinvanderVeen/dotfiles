@@ -34,7 +34,7 @@ mode "resize"
 }
 
 
-set $w1 "1:  Web"
+set $w1 "1:  Web"
 set $w2 "2:  Term"
 set $w3 "3"
 set $w4 "4"
