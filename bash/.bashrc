@@ -125,11 +125,11 @@ export BROWSER=/usr/bin/firefox
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
 alias more=less
-alias con='$EDITOR $HOME/.i3/config'
+alias con='$EDITOR $HOME/.config/i3/config'
 alias comp='$EDITOR $HOME/.config/compton.conf'
-alias fixit='sudo rm -f /var/lib/pacman/db.lck'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias newterm='urxvt & disown'
+
+export CLEAN_HOME=/opt/clean/
+export PATH=$PATH:/opt/clean/bin
