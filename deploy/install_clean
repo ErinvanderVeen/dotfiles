@@ -1,0 +1,5 @@
+!#/bin/bash
+
+mkdir /opt/clean/
+cd /opt/clean/
+curl ftp://ftp.cs.ru.nl/pub/Clean/builds/linux-x64/clean-bundle-complete-linux-x64-latest.tgz | tar xvz --strip 1
