@@ -132,4 +132,4 @@ alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --colo
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 
 export CLEAN_HOME=/opt/clean/
-export PATH=$PATH:/opt/clean/bin
+export PATH=$PATH:/opt/clean/bin:$HOME/.dotfiles/bin
