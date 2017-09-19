@@ -131,5 +131,5 @@ alias comp='$EDITOR $HOME/.config/compton.conf'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 
-export CLEAN_HOME=/opt/clean/
-export PATH=$PATH:/opt/clean/bin:$HOME/.dotfiles/bin
+export CLEAN_HOME=/opt/clean
+export PATH=$PATH:/opt/clean/bin:/opt/clean/lib/exe:$HOME/.dotfiles/bin
