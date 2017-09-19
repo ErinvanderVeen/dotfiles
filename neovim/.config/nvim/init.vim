@@ -21,7 +21,7 @@ set cc=80
 set linebreak
 set nu
 set dir=~/.swp
-set listchars=nbsp:¬,tab:▸\ ,extends:»,precedes:«,trail:•
+set listchars=nbsp:¬,tab:❥\ ,extends:»,precedes:«,trail:•
 set list
 
 " Use system clipboard
