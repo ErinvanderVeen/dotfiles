@@ -25,11 +25,6 @@ if [[ -f $DIR/packages/apt ]]; then
 fi
 
 ###############################################################################
-# Packages not in repositories
-###############################################################################
-URL='https://discordapp.com/api/download?platform=linux&format=deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
-
-###############################################################################
 # Loading dotfiles
 ###############################################################################
 sudo apt install xstow
@@ -42,8 +37,16 @@ xstow $DIR/../gnupg/
 xstow $DIR/../gtk/
 xstow $DIR/../i3/
 xstow $DIR/../ssh/
+xstow $DIR/../neovim/
 
 ###############################################################################
-# Install Clean
+# Packages not in repositories
 ###############################################################################
+# Discord
+URL='https://discordapp.com/api/download?platform=linux&format=deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
+
+# Clean Nightly
 sudo bash install_clean
+
+# vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
