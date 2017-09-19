@@ -24,6 +24,9 @@ set dir=~/.swp
 set listchars=nbsp:¬,tab:▸\ ,extends:»,precedes:«,trail:•
 set list
 
+" Use system clipboard
+set clipboard=unnamedplus
+
 " Move through long lines as they were short multiple lines
 map j gj
 map <down> j
