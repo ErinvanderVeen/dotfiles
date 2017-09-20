@@ -16,8 +16,8 @@ bar
 		statusline #ffffff
 		separator #ffffff
 
-		focused_workspace #000000 #3F4551 #ffffff
-		inactive_workspace #333333 #222222 #888888
+		focused_workspace #2F333E #2F333E #ffffff
+		inactive_workspace #2F333E #2F333E #888888
 		urgent_workspace #aa0000 #990000 #ffffff
 	}
 
@@ -40,7 +40,7 @@ set $w3 "3"
 set $w4 "4"
 set $w5 "5"
 set $w6 "6"
-set $w7 "7 
+set $w7 "7"
 set $w8 "8"
 set $w9 "9:  Chat"
 set $w0 "10:  Music"
