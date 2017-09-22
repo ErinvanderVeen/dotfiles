@@ -121,7 +121,7 @@ exec --no-startup-id gnome-screensaver
 
 # Wacom configuration, done through this method instead of Xorg config such that
 # it can be done in usermode
-exec xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput $(xrandr | grep primary | awk '{print $1;}')
+exec xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput $(xrandr | grep primary | cut -d' ' -f1)
 
 assign [class="Firefox-esr"] $w1
 assign [class="Gnome-terminal"] $w2
