@@ -113,7 +113,7 @@ client.focused #333333 #ffffff #ffffff
 
 exec_always --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --randomize --bg-fill ~/.config/wallpapers/*.{jpg,png}
+exec --no-startup-id feh --randomize --bg-fill ~/ownCloud/Pictures/Divers\ Wallpapers/*
 exec --no-startup-id owncloud
 exec --no-startup-id xautolock -time 10 -locker "gnome-screensaver-command -l"
 exec --no-startup-id redshift
