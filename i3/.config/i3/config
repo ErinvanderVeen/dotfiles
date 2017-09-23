@@ -68,7 +68,7 @@ bindsym $mod+0 workspace $w0
 bindsym $mod+a focus parent
 bindsym $mod+d exec dmenu_run
 bindsym $mod+e layout toggle split
-bindsym $mod+f fullscreen toggle global
+bindsym $mod+f fullscreen toggle
 bindsym $mod+h split h
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
