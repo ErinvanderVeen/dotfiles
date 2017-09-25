@@ -70,6 +70,7 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen toggle
 bindsym $mod+h split h
+bindsym $mod+i exec gnome-control-center
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 bindsym $mod+v split v
@@ -122,8 +123,8 @@ exec --no-startup-id gnome-screensaver
 # Wacom configuration, done through this method instead of Xorg config such that
 # it can be done in usermode
 exec xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput $(xrandr | grep primary | cut -d' ' -f1)
-# Bind top left button to ctrl+z
-exec xsetwacom set "Wacom Intuos S Pad pad" button 3 "key +ctrl +z"
+# Bind top right button to ctrl+z
+exec xsetwacom set "Wacom Intuos S Pad pad" button 9 "key +ctrl +z"
 
 assign [class="Firefox-esr"] $w1
 assign [class="Gnome-terminal"] $w2
