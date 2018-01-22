@@ -2,9 +2,14 @@
 " Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'vim-latex/vim-latex'	" LaTeX
-Plug 'camilstaps/vim-clean'	" Clean
-Plug 'camilstaps/vim-bb'	" Blackboard Feedback
+Plug 'vim-latex/vim-latex'     " LaTeX
+Plug 'camilstaps/vim-clean'    " Clean
+Plug 'camilstaps/vim-bb'       " Blackboard Feedback
+Plug 'camilstaps/vim-smv'      " NuSMV
+Plug 'ErinvanderVeen/vim-smt2' " SMT2
+Plug 'godlygeek/tabular'       " Align on characters
+Plug 'aurieh/discord.nvim'     " Discord Rich presence
+Plug 'airblade/vim-gitgutter'  " Git in Vim
 
 " Initialize plugin system
 call plug#end()
