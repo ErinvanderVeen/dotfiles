@@ -43,3 +43,7 @@ let g:tex_flavor='latex'
 " Unset colorcolumn for Clean and Tex files
 au BufEnter *.{icl,dcl} set cc=""
 au FileType tex set cc=""
+
+" Set vim-latex to output pdf
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
