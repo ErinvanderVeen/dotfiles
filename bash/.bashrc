@@ -124,6 +124,7 @@ alias con='$EDITOR $HOME/.config/i3/config'
 alias comp='$EDITOR $HOME/.config/compton.conf'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l -h --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias clean-systemdynamic='rm /opt/clean/lib/{ArgEnv,Directory,Dynamics,Gast,Generics,GraphCopy,iTasks,Platform,Sapl,StdLib,TCPIP}/**/*.abc /opt/clean/lib/StdEnv/Clean\ System\ Files/{_System,Std}*.abc **/*.abc'
 
 export CLEAN_HOME=/opt/clean
 export PATH=$PATH:/opt/clean/bin:/opt/clean/lib/exe:/opt/idea/bin:$HOME/.dotfiles/bin
