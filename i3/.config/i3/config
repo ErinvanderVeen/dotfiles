@@ -1,26 +1,28 @@
 set $mod Mod4
 font pango:monospace 8, FontAwesome 8
 floating_modifier $mod
-new_window 1pixel
+new_window pixel
+# Force border for gnome apps
+for_window [class=".*"] border pixel 2
 
-bar 
+bar
 {
-	font pango:FontAwesome 8
-	separator_symbol " | "
-	position top
-	status_command i3status
+	font pango:FontAwesome 12
 
-	colors 
+	position top
+	status_command i3blocks
+
+	colors
 	{
-		background #2F333E
+		background #1F1F1F
 		statusline #ffffff
 		separator #ffffff
 
-		focused_workspace #2F333E #2F333E #ffffff
-		inactive_workspace #2F333E #2F333E #888888
+		focused_workspace #f6bb43 #f6bb43 #1F1F1F
+		inactive_workspace #1F1F1F #1F1F1F #f6bb43
+		active_workspace #1F1F1F #1F1F1F #f6bb43
 		urgent_workspace #aa0000 #990000 #ffffff
 	}
-
 }
 
 mode "resize"
@@ -33,17 +35,19 @@ mode "resize"
 	bindsym Escape mode "default"
 }
 
+client.background #1F1F1F
+client.focused #333333 #f6bb43 #f6bb43 #FFFFFF
 
-set $w1 "1:  Web"
-set $w2 "2:  Term"
+set $w1 "1: ♥"
+set $w2 "2: ♥"
 set $w3 "3: ♥"
 set $w4 "4: ♥"
 set $w5 "5: ♥"
 set $w6 "6: ♥"
 set $w7 "7: ♥"
 set $w8 "8: ♥"
-set $w9 "9:  Chat"
-set $w0 "10:  Music"
+set $w9 "9: ♥"
+set $w0 "10: ♥"
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -66,7 +70,7 @@ bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w0
 
 bindsym $mod+a focus parent
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen toggle
 bindsym $mod+h split h
@@ -109,9 +113,6 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86KbdBrightnessDown exec "~/.dotfiles/bin/kbbacklight -"
 bindsym XF86KbdBrightnessUp exec "~/.dotfiles/bin/kbbacklight +"
 
-client.background #3f4551
-client.focused #333333 #ffffff #ffffff
-
 exec_always --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill ~/ownCloud/Pictures/Divers\ Wallpapers/iceland.jpg
@@ -127,6 +128,12 @@ exec_always xsetwacom set "Wacom Intuos S Pad pad" button 9 "key +ctrl +z"
 # Bind bottom right button to del
 exec_always xsetwacom set "Wacom Intuos S Pad pad" button 8 "key +del"
 
+# Keyboard configuration
+exec_always setxkbmap -rules evdev -model evdev -layout us -variant intl
+
+# Screen layout configuration
+exec_always xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-1 --off --output DVI-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal
+
 assign [class="Firefox-esr"] $w1
 assign [class="Gnome-terminal"] $w2
 assign [class="keepassx"] $w9
@@ -134,4 +141,5 @@ assign [class="discord"] $w9
 
 for_window [class="Eog"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Yad"] floating enable
 

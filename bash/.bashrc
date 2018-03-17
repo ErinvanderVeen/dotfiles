@@ -21,7 +21,7 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+#shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\e[0;33m\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$\e[0m '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\e[0;33m\u@\h:\w\$\e[0m '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -124,6 +124,8 @@ alias con='$EDITOR $HOME/.config/i3/config'
 alias comp='$EDITOR $HOME/.config/compton.conf'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l -h --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias vim='vim -p'
+alias dnd='nautilus ~/ownCloud/Documents/Personal/Dungeons\ and\ Dragons/'
 
 export CLEAN_HOME=/opt/clean
 export PATH=$PATH:/opt/clean/bin:/opt/clean/lib/exe:/opt/idea/bin:$HOME/.dotfiles/bin

@@ -39,7 +39,11 @@ map <down> j
 map k gk
 map <up> k
 
+" Set version of TeX that I use
 let g:tex_flavor='latex'
+
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Unset colorcolumn for Clean and Tex files
 au BufEnter *.{icl,dcl} set cc=""

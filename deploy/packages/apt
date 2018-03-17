@@ -1,19 +1,16 @@
-# GNOME-stack
-# TODO: Change to essential gnome packages
-gnome
-gnome-screensaver
-
 # Themes
-arc-theme
-numix-icon-theme
-fonts-font-awesome
 
 # Desktop
-i3
-xautolock
+i3-wm
 compton
 feh
 redshift
+i3blocks
+
+# Blocks
+aptitude
+yad
+xdotool
 
 # Printing/Scanning
 simple-scan
@@ -22,6 +19,7 @@ simple-scan
 pasystray
 network-manager-gnome
 scrot
+python3-pip
 
 # Applications
 neovim
@@ -35,4 +33,3 @@ gdebi
 
 # Drawing Tablet / Notes taking
 xserver-xorg-input-wacom
-xournal
