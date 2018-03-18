@@ -135,7 +135,6 @@ exec_always setxkbmap -rules evdev -model evdev -layout us -variant intl
 exec_always xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-1 --off --output DVI-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal
 
 assign [class="Firefox-esr"] $w1
-assign [class="Gnome-terminal"] $w2
 assign [class="keepassx"] $w9
 assign [class="discord"] $w9
 
