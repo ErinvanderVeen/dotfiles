@@ -117,6 +117,9 @@ exec_always --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill ~/ownCloud/Pictures/Divers\ Wallpapers/iceland.jpg
 exec --no-startup-id owncloud
+exec --no-startup-id discord
+exec --no-startup-id keepassx
+exec --no-startup-id spotify
 exec --no-startup-id redshift
 exec --no-startup-id gnome-screensaver
 
