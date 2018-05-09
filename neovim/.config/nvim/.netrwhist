@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/erin/ownCloud/Projects/dynamics-interpreter/src/bytecode_gen'
 let g:netrw_dirhist_2='/home/erin/ownCloud/Projects/dynamics-interpreter/test/Clean System Files'
 let g:netrw_dirhist_3='/home/erin/ownCloud/Projects/dynamics-interpreter/src/bytecode_gen'
+let g:netrw_dirhist_4='/home/erin/ownCloud/Pictures/Divers Erin'
+let g:netrw_dirhist_5='/home/erin/ownCloud/Projects/dynamics-compiler-paper/.git'
+let g:netrw_dirhist_6='/home/erin/ownCloud/Projects/Software-Analysis/.git'
+let g:netrw_dirhist_7='/home/erin/ownCloud/Projects/dynamics-interpreter/src/node_copy/Clean System Files'

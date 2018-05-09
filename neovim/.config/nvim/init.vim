@@ -52,3 +52,6 @@ au FileType tex set cc=""
 " Set vim-latex to output pdf
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
+
+" Set spell check for .tex files
+au FileType tex set spell

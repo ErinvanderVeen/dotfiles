@@ -105,8 +105,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+l exec gnome-screensaver-command -l
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
@@ -115,6 +115,7 @@ bindsym XF86KbdBrightnessUp exec "~/.dotfiles/bin/kbbacklight +"
 
 exec_always --no-startup-id compton --config ~/.config/compton/compton.conf -b
 exec --no-startup-id nm-applet
+exec --no-startup-id pnmixer
 exec --no-startup-id feh --bg-fill ~/ownCloud/Pictures/Divers\ Wallpapers/iceland.jpg
 exec --no-startup-id owncloud
 exec --no-startup-id discord
@@ -137,9 +138,9 @@ exec_always setxkbmap -rules evdev -model evdev -layout us -variant intl
 # Screen layout configuration
 exec_always xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DVI-1 --off --output DVI-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal
 
-assign [class="Firefox-esr"] $w1
-assign [class="keepassx"] $w9
 assign [class="discord"] $w9
+assign [class="keepassx"] $w0
+assign [class="spotify"] $w0
 
 for_window [class="Eog"] floating enable
 for_window [class="Lxappearance"] floating enable

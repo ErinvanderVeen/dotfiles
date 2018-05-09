@@ -6,6 +6,7 @@ compton
 feh
 redshift
 i3blocks
+pnmixer
 
 # Blocks
 aptitude
@@ -16,20 +17,29 @@ xdotool
 simple-scan
 
 # Utility
-pasystray
 network-manager-gnome
 scrot
 python3-pip
 
-# Applications
+# Applications #
+# Editor
 neovim
+# Cloud
 owncloud-client
+# Games
 steam
+# Browser
 firefox-esr
+# Password Manager
 keepassx
+# Torrent client
 transmission-gtk
+# Keyring Manager (SSH, GPG, ETC)
 seahorse
+# .deb installer
 gdebi
+# Mail Client
+evolution
 
 # Drawing Tablet / Notes taking
 xserver-xorg-input-wacom
